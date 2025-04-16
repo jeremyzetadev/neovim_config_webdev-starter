@@ -4,9 +4,10 @@
 -- Setting mapleader
 vim.keymap.set('n',"[", "/{<Enter>")
 vim.keymap.set('n',"]", "/{<Enter>")
-vim.keymap.set('n',"'f1", [[:cd D:\YMD\support<cr>]])
-vim.keymap.set('n',"'f5", [[:cd C:\Users\SDG13\Documents\notepad++<cr>]])
-vim.keymap.set('n',"'fd", [[:!start explorer /select,%:p<cr>]])
+vim.keymap.set('n',"'f1", [[:cd /mnt/c/Users/Senpai/Desktop/Practice/<cr>]])
+vim.keymap.set('n',"'f2", [[:cd /mnt/c/Users/Senpai/Desktop/Practice/HTML_CSS/test2/HTML_CSS<cr>]])
+vim.keymap.set('n',"'f3", [[:cd C:\Users\Senpai\Desktop\Practice\React<cr>]])
+--vim.keymap.set('n',"'fd", [[:!start explorer /select,%:p<cr>]])
 vim.keymap.set('n',"tn", [[:tabnew<CR> <esc>]])
 vim.keymap.set('n',"tt", [[:bd<CR> <esc>]])
 vim.keymap.set('n',"tq", [[:q!<CR> <esc>]])
@@ -29,8 +30,8 @@ vim.g.maplocalleader = ' '
 local opts = { noremap = true, silent = true }
 
 -- nvim tree 
-vim.keymap.set('n',"<Leader>t", ":NvimTreeToggle<Return>", opts)
-vim.keymap.set('n',"<Leader>tf", ":NvimTreeFindFile<Return", opts)
+-- vim.keymap.set('n',"<Leader>t", ":NvimTreeToggle<Return>", opts)
+-- vim.keymap.set('n',"<Leader>tf", ":NvimTreeFindFile<Return", opts)
 
 -- Disable the spacebar key's default behavior in Normal and Visual modes
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })

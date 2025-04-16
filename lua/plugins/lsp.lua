@@ -194,20 +194,77 @@ return { -- LSP Configuration & Plugins
         },
       },
       jsonls = {},
-      sqlls = {},
-      terraformls = {},
-      yamlls = {},
-      bashls = {},
-      dockerls = {},
-      docker_compose_language_service = {},
+      -- sqlls = {},
+      -- terraformls = {},
+      -- yamlls = {},
+      -- bashls = {},
+      -- dockerls = {},
+      -- docker_compose_language_service = {},
       -- tailwindcss = {},
       -- graphql = {},
       -- html = { filetypes = { 'html', 'twig', 'hbs' } },
-      -- cssls = {},
       -- ltex = {},
       -- texlab = {},
+      tailwindcss = {
+					root_dir = function(...)
+						return require("lspconfig.util").root_pattern(".git")(...)
+					end,
+				},
+        ts_ls = {
+            root_dir = function(...)
+                return require("lspconfig.util").root_pattern(".git")(...)
+            end,
+            single_file_support = false,
+            settings = {
+                typescript = {
+                    inlayHints = {
+                        includeInlayParameterNameHints = "literal",
+                        includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+                        includeInlayFunctionParameterTypeHints = true,
+                        includeInlayVariableTypeHints = false,
+                        includeInlayPropertyDeclarationTypeHints = true,
+                        includeInlayFunctionLikeReturnTypeHints = true,
+                        includeInlayEnumMemberValueHints = true,
+                    },
+                },
+                javascript = {
+                    inlayHints = {
+                        includeInlayParameterNameHints = "all",
+                        includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+                        includeInlayFunctionParameterTypeHints = true,
+                        includeInlayVariableTypeHints = true,
+                        includeInlayPropertyDeclarationTypeHints = true,
+                        includeInlayFunctionLikeReturnTypeHints = true,
+                        includeInlayEnumMemberValueHints = true,
+                    },
+                },
+            },
+        },
+      cssls = {},
+      emmet_language_server = {},
     }
 
+
+    -- require('lspconfig').cssmodules_ls.setup{}
+    -- require('lspconfig').html.setup{}
+    require('lspconfig').emmet_language_server.setup{}
+    require('lspconfig').ts_ls.setup{
+  init_options = {
+    plugins = {
+      {
+        name = "@vue/typescript-plugin",
+        location = "/usr/local/lib/node_modules/@vue/typescript-plugin",
+        languages = {"javascript", "typescript", "vue"},
+      },
+    },
+  },
+  filetypes = {
+    "javascript",
+    "typescript",
+    "vue",
+  },
+}
+        
     -- Ensure the servers and tools above are installed
     require('mason').setup()
 

@@ -6,6 +6,7 @@ vim.o.hlsearch = true -- Set highlight on search
 vim.o.backup = false
 vim.o.showcmd = true
 vim.opt.cmdheight = 1
+vim.opt.autochdir = true
 
 vim.o.mouse = 'a' -- Enable mouse mode
 vim.o.clipboard = 'unnamedplus' -- Sync clipboard between OS and Neovim.
