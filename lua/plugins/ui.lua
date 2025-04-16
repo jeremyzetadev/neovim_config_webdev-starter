@@ -36,7 +36,7 @@ return {
 			require("incline").setup({
 				window = {
 					padding = 0,
-					margin = { horizontal = 0 },
+				margin = { horizontal = 0 },
 				},
 				render = function(props)
 					local filename = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(props.buf), ":t")
@@ -95,65 +95,65 @@ return {
 			},
 		},
 	},
-	{
-		"nvim-tree/nvim-tree.lua",
-		config = function()
-			require("nvim-tree").setup({
-				on_attach = function(bufnr)
-					local api = require("nvim-tree.api")
-
-					local function opts(desc)
-						return {
-							desc = "nvim-tree: " .. desc,
-							buffer = bufnr,
-							noremap = true,
-							silent = true,
-							nowait = true,
-						}
-					end
-
-					-- default mappings
-					api.config.mappings.default_on_attach(bufnr)
-
-					-- custom mappings
-					vim.keymap.set("n", "t", api.node.open.tab, opts("Tab"))
-				end,
-				actions = {
-					open_file = {
-						quit_on_open = false,
-					},
-				},
-				sort = {
-					sorter = "case_sensitive",
-				},
-				view = {
-					width = 30,
-					relativenumber = true,
-				},
-				renderer = {
-					group_empty = true,
-				},
-				filters = {
-					dotfiles = true,
-					custom = {
-						"node_modules/.*",
-					},
-				},
-				log = {
-					enable = true,
-					truncate = true,
-					types = {
-						diagnostics = true,
-						git = true,
-						profile = true,
-						watcher = true,
-					},
-				},
-			})
-
-			if vim.fn.argc(-1) == 0 then
-				vim.cmd("NvimTreeFocus")
-			end
-		end,
-	},
+	-- {
+	-- 	"nvim-tree/nvim-tree.lua",
+	-- 	config = function()
+	-- 		require("nvim-tree").setup({
+	-- 			on_attach = function(bufnr)
+	-- 				local api = require("nvim-tree.api")
+	--
+	-- 				local function opts(desc)
+	-- 					return {
+	-- 						desc = "nvim-tree: " .. desc,
+	-- 						buffer = bufnr,
+	-- 						noremap = true,
+	-- 						silent = true,
+	-- 						nowait = true,
+	-- 					}
+	-- 				end
+	--
+	-- 				-- default mappings
+	-- 				api.config.mappings.default_on_attach(bufnr)
+	--
+	-- 				-- custom mappings
+	-- 				vim.keymap.set("n", "t", api.node.open.tab, opts("Tab"))
+	-- 			end,
+	-- 			actions = {
+	-- 				open_file = {
+	-- 					quit_on_open = false,
+	-- 				},
+	-- 			},
+	-- 			sort = {
+	-- 				sorter = "case_sensitive",
+	-- 			},
+	-- 			view = {
+	-- 				width = 30,
+	-- 				relativenumber = true,
+	-- 			},
+	-- 			renderer = {
+	-- 				group_empty = true,
+	-- 			},
+	-- 			filters = {
+	-- 				dotfiles = true,
+	-- 				custom = {
+	-- 					"node_modules/.*",
+	-- 				},
+	-- 			},
+	-- 			log = {
+	-- 				enable = true,
+	-- 				truncate = true,
+	-- 				types = {
+	-- 					diagnostics = true,
+	-- 					git = true,
+	-- 					profile = true,
+	-- 					watcher = true,
+	-- 				},
+	-- 			},
+	-- 		})
+	--
+	-- 		if vim.fn.argc(-1) == 0 then
+	-- 			vim.cmd("NvimTreeFocus")
+	-- 		end
+	-- 	end,
+	-- },
 }
