@@ -13,20 +13,20 @@ sudo apt install npm****
 check init.lua if server names match mason
 :checkhealth mason     -> for diagnostic of mason
 
-[setting up LSP]
-||for ts_ls||
-npm install -g typescript typescript-language-server
-at lsp.lua or 'neovim/nvim-lspconfig'
-require('lspconfig').ts_ls.setup{
-  init_options = {
-    plugins = {
-      {
-        name = "@vue/typescript-plugin",
-        location = "/usr/local/lib/node_modules/@vue/typescript-plugin",
-        languages = {"javascript", "typescript", "vue"},
-      },
-    },
-  },
+[setting up LSP]  <br>
+||for ts_ls||  <br>
+npm install -g typescript typescript-language-server <br>
+at lsp.lua or 'neovim/nvim-lspconfig'  <br>
+require('lspconfig').ts_ls.setup{  <br>
+  init_options = {  <br>
+    plugins = {  <br>
+      {  <br>
+        name = "@vue/typescript-plugin",  <br>
+        location = "/usr/local/lib/node_modules/@vue/typescript-plugin",  <br>
+        languages = {"javascript", "typescript", "vue"},  <br>
+      },  <br>
+    },  <br>
+  },  <br>
 
 
 
