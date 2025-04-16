@@ -13,5 +13,22 @@ sudo apt install npm****
 check init.lua if server names match mason
 :checkhealth mason     -> for diagnostic of mason
 
+[setting up LSP]
+||for ts_ls||
+npm install -g typescript typescript-language-server
+at lsp.lua or 'neovim/nvim-lspconfig'
+require('lspconfig').ts_ls.setup{
+  init_options = {
+    plugins = {
+      {
+        name = "@vue/typescript-plugin",
+        location = "/usr/local/lib/node_modules/@vue/typescript-plugin",
+        languages = {"javascript", "typescript", "vue"},
+      },
+    },
+  },
+
+
+
 ## Need to fix refactor(doesn't work)
 ## Need to fix autocompletion first suggest using enter clicks suggestion - use tab for autocomplete
