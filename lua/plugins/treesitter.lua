@@ -4,6 +4,7 @@ return {
 		tag = "v0.9.1",
 		opts = {
 			ensure_installed = {
+                "html",
 				"javascript",
 				"typescript",
 				"css",

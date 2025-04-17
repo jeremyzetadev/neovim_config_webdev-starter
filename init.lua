@@ -17,11 +17,12 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- Import color theme based on environment variable NVIM_THEME
-local default_color_scheme = 'nord'
-local env_var_nvim_theme = os.getenv 'NVIM_THEME' or default_color_scheme
+ local default_color_scheme = 'catpuccin'
+ local env_var_nvim_theme = os.getenv 'NVIM_THEME' or default_color_scheme
 
 -- Define a table of theme modules
 local themes = {
+  catpuccin = 'plugins.themes.catpuccin',
   nord = 'plugins.themes.nord',
   onedark = 'plugins.themes.onedark',
 }
@@ -38,6 +39,7 @@ require('lazy').setup({
   require 'plugins.bufferline',
   require 'plugins.lualine',
   require 'plugins.none-ls',
+  --require 'plugins.colorscheme',
   --require 'plugins.alpha',
   --require 'plugins.indent-blankline',
   require 'plugins.lazygit',
