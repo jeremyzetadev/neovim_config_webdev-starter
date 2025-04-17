@@ -37,7 +37,7 @@ require('lazy').setup({
   require 'plugins.refactor',
   require 'plugins.bufferline',
   require 'plugins.lualine',
-  --require 'plugins.none-ls',
+  require 'plugins.none-ls',
   --require 'plugins.alpha',
   --require 'plugins.indent-blankline',
   require 'plugins.lazygit',
