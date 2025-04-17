@@ -240,7 +240,7 @@ return { -- LSP Configuration & Plugins
                 },
             },
         },
-      cssls = {},
+      --cssls = {},
       emmet_language_server = {},
     }
 
@@ -255,7 +255,7 @@ return { -- LSP Configuration & Plugins
       {
         name = "@vue/typescript-plugin",
         location = "/usr/local/lib/node_modules/@vue/typescript-plugin",
-        languages = {"javascript", "typescript", "vue"},
+        languages = {"html", "css", "javascript", "typescript", "vue"},
       },
     },
   },
