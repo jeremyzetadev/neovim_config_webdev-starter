@@ -15,6 +15,7 @@ return { -- Autocompletion
         return 'make install_jsregexp'
       end)(),
     },
+    'mlaursen/vim-react-snippets',
     'saadparwaiz1/cmp_luasnip',
 
     -- Adds other completion capabilities.
@@ -27,6 +28,7 @@ return { -- Autocompletion
     -- Adds a number of user-friendly snippets
     'rafamadriz/friendly-snippets',
   },
+
   config = function()
     local cmp = require 'cmp'
     require('luasnip.loaders.from_vscode').lazy_load()
@@ -61,6 +63,14 @@ return { -- Autocompletion
       TypeParameter = '󰊄',
     }
 
+    require("vim-react-snippets").lazy_load()
+
+    -- if you do not want to wrap all props in `Readonly<T>`
+    local config = require("vim-react-snippets.config")
+    config.readonly_props = false
+
+    require('luasnip').filetype_extend("javascript", { "javascriptreact" })
+    require('luasnip').filetype_extend("javascript", { "html" })
     cmp.setup {
       -- preselect = cmp.PreselectMode.None,
       snippet = {

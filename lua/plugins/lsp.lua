@@ -248,6 +248,7 @@ return { -- LSP Configuration & Plugins
     -- require('lspconfig').cssmodules_ls.setup{}
     -- require('lspconfig').html.setup{}
     require('lspconfig').emmet_language_server.setup{}
+    require('lspconfig').tailwindcss.setup{}
     require('lspconfig').ts_ls.setup{
   init_options = {
     plugins = {
@@ -258,11 +259,14 @@ return { -- LSP Configuration & Plugins
       },
     },
   },
-  filetypes = {
-    "javascript",
-    "typescript",
-    "vue",
-  },
+    filetypes = {
+      'javascript',
+      'javascriptreact',
+      'javascript.jsx',
+      'typescript',
+      'typescriptreact',
+      'typescript.tsx',
+    },
 }
         
     -- Ensure the servers and tools above are installed
