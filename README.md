@@ -14,7 +14,9 @@ check init.lua if server names match mason
 :checkhealth mason     -> for diagnostic of mason
 
 [setting up LSP]  <br>
+:help lspconfig-all
 ||for ts_ls||  <br>
+<br>
 npm install -g typescript typescript-language-server <br>
 at lsp.lua or 'neovim/nvim-lspconfig'  <br>
 require('lspconfig').ts_ls.setup{  <br>
@@ -30,7 +32,7 @@ require('lspconfig').ts_ls.setup{  <br>
 
 
 ## For faster telescope and complete-setup
-:checkhealth telescope
+:checkhealth telescope<br>
 Install ripgrep and fdfind
 
 ## Need to fix refactor(some areas work/ some doesnt)
