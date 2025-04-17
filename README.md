@@ -29,6 +29,9 @@ require('lspconfig').ts_ls.setup{  <br>
   },  <br>
 
 
+## For faster telescope and complete-setup
+:checkhealth telescope
+Install ripgrep and fdfind
 
-## Need to fix refactor(doesn't work)
-## Need to fix autocompletion first suggest using enter clicks suggestion - use tab for autocomplete
+## Need to fix refactor(some areas work/ some doesnt)
+
