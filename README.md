@@ -11,7 +11,7 @@ sudo apt install npm****
 
 # LSP Configs
 check init.lua if server names match mason
-:checkhealth mason     -> for diagnostic of mason
+:checkhealth mason     -> for diagnostic of mason <br>
 :LspInfo   -> check active lsp
 
 [setting up LSP]  <br>
@@ -31,6 +31,10 @@ require('lspconfig').ts_ls.setup{  <br>
     },  <br>
   },  <br>
 
+
+## Tree Sitter
+:TSInstall <language_to_install>
+:TSInstallInfo
 
 ## For faster telescope and complete-setup
 :checkhealth telescope<br>
