@@ -12,6 +12,7 @@ sudo apt install npm****
 # LSP Configs
 check init.lua if server names match mason
 :checkhealth mason     -> for diagnostic of mason
+:LspInfo   -> check active lsp
 
 [setting up LSP]  <br>
 :help lspconfig-all
