@@ -33,7 +33,7 @@ require('lspconfig').ts_ls.setup{  <br>
 
 
 ## Tree Sitter
-:TSInstall <language_to_install>
+:TSInstall <language_to_install> <br>
 :TSInstallInfo
 
 ## For faster telescope and complete-setup
