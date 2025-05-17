@@ -69,6 +69,7 @@ return { -- Autocompletion
     local config = require("vim-react-snippets.config")
     config.readonly_props = false
 
+    -- for react RAFCE auto complete
     require('luasnip').filetype_extend("javascript", { "javascriptreact" })
     require('luasnip').filetype_extend("javascript", { "html" })
     cmp.setup {
