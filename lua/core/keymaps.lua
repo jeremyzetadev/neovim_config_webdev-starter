@@ -29,6 +29,23 @@ vim.g.maplocalleader = ' '
 -- For conciseness
 local opts = { noremap = true, silent = true }
 
+-- Copy current path to clipboard
+-- need xclip - install at linux cli
+vim.opt.clipboard = "unnamedplus"
+-- if vim.fn.has('wsl')==1 then
+--     vim.api.nvim_create_autocmd('TextYankPost',{
+--         group = vim.api.nvim_create_augroup('Yank',{ clear = true }),
+--         callback = function()
+--             vim.fn.system('clip.exe',vim.fn.getreg('"'))
+--         end,
+--     })
+-- end
+local function insertFullPath()
+    local filepath = vim.fn.expand('%:p')
+    vim.fn.setreg('+',filepath) --  write to clipboard
+end
+vim.keymap.set('n', "<leader>pc", insertFullPath, opts)
+
 -- nvim tree 
 -- vim.keymap.set('n',"<Leader>t", ":NvimTreeToggle<Return>", opts)
 -- vim.keymap.set('n',"<Leader>tf", ":NvimTreeFindFile<Return", opts)
