@@ -43,6 +43,8 @@ vim.o.conceallevel = 0 -- so that `` is visible in markdown files
 vim.o.fileencoding = 'utf-8' -- the encoding written to a file
 --vim.o.fileencodings = 'ucs-bom,utf-8,cp932,default' -- encoding for jp, (can also use sjis) called shift-jis
 
+vim.opt.fileformat = 'unix' -- change fileformat to unix if windows use (dos)
+
 vim.opt.shortmess:append 'c' -- don't give |ins-completion-menu| messages
 vim.opt.iskeyword:append '-' -- hyphenated words recognized by searches
 vim.opt.formatoptions:remove { 'c', 'r', 'o' } -- don't insert the current comment leader automatically for auto-wrapping comments using 'textwidth', hitting <Enter> in insert mode, or hitting 'o' or 'O' in normal mode.
