@@ -8,6 +8,7 @@ sudo apt-get install neovim <br>
 Install ripgrep <br>
 Install fdfind <br>
 Install git <br>
+Install curl
 
 ## Install kickstarter
 from [https://github.com/nvim-lua/kickstart.nvim] <br>
@@ -56,5 +57,6 @@ require('lspconfig').ts_ls.setup{  <br>
 Install ripgrep and fdfind
 
 ## Need to fix refactor(some areas work/ some doesnt)
+
 
 
