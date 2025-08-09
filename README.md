@@ -1,4 +1,19 @@
 # To Start (LINUX/WSL)
+## Install nvim first using
+sudo add-apt-repository ppa:neovim-ppa/unstable <br>
+sudo apt-get update <br>
+sudo apt-get install neovim <br>
+
+## Install dependencies
+Install ripgrep <br>
+Install fdfind <br>
+Install git <br>
+
+## Install kickstarter
+from [https://github.com/nvim-lua/kickstart.nvim] <br>
+git clone https://github.com/nvim-lua/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
+
+## Install custom neovim setup
 git clone https://github.com/jeremyzetadev/neovim_config_webdev-starter ~/.config/nvim
 
 # Add nerd-fonts to have icons
@@ -41,4 +56,5 @@ require('lspconfig').ts_ls.setup{  <br>
 Install ripgrep and fdfind
 
 ## Need to fix refactor(some areas work/ some doesnt)
+
 
