@@ -20,7 +20,10 @@ vim.keymap.set('n',"}", "}zz")
 vim.keymap.set('n',"{", "{zz")
 vim.keymap.set('n',"[", "/{<Enter>")
 vim.keymap.set('n',"]", "/{<Enter>")
-
+-- Set ctrl+z to undo to avoid quitting vim
+vim.keymap.set('n',"<C-z>","u")
+-- remove highlight from / ? (find command highlights)
+vim.keymap.set('n',"'n", [[:nohl<cr>]])
 
 -- Set leader key
 vim.g.mapleader = ' '
