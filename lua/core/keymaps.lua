@@ -2,8 +2,8 @@
 
 
 -- Setting mapleader
-vim.keymap.set('n',"[", "/{<Enter>")
-vim.keymap.set('n',"]", "/{<Enter>")
+--vim.keymap.set('n',"[", "/{<Enter>")
+--vim.keymap.set('n',"]", "/{<Enter>")
 vim.keymap.set('n',"'f1", [[:cd /mnt/c/Users/Senpai/Desktop/Practice/<cr>]])
 vim.keymap.set('n',"'f2", [[:cd /mnt/c/Users/Senpai/Desktop/Practice/HTML_CSS/test2/HTML_CSS<cr>]])
 vim.keymap.set('n',"'f3", [[:cd C:\Users\Senpai\Desktop\Practice\React<cr>]])
@@ -18,8 +18,6 @@ vim.keymap.set('n',"k", "kzz")
 vim.keymap.set('n',"j", "jzz")
 vim.keymap.set('n',"}", "}zz")
 vim.keymap.set('n',"{", "{zz")
-vim.keymap.set('n',"[", "/{<Enter>")
-vim.keymap.set('n',"]", "/{<Enter>")
 -- Set ctrl+z to undo to avoid quitting vim
 vim.keymap.set('n',"<C-z>","u")
 -- remove highlight from / ? (find command highlights)
