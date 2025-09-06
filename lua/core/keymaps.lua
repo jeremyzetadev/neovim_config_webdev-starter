@@ -22,6 +22,10 @@ vim.keymap.set('n',"{", "{zz")
 vim.keymap.set('n',"<C-z>","u")
 -- remove highlight from / ? (find command highlights)
 vim.keymap.set('n',"'n", [[:nohl<cr>]])
+-- Set bracket adder and set inside cursor
+--vim.keymap.set('n',"<A-[>", [[a{}<left><cr><esc>O]])
+vim.keymap.set('i',"<A-[>", [[{}<left><cr><esc>O]], {noremap =true, silent=true})
+
 
 -- Set leader key
 vim.g.mapleader = ' '
