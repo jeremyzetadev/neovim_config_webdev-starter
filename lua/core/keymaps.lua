@@ -26,6 +26,9 @@ vim.keymap.set('n',"'n", [[:nohl<cr>]])
 --vim.keymap.set('n',"<A-[>", [[a{}<left><cr><esc>O]])
 vim.keymap.set('i',"<A-[>", [[{}<left><cr><esc>O]], {noremap =true, silent=true})
 
+--for quick fix (grr to queue) (to change use :cdo s/old/new/gc)
+vim.keymap.set('n',"<leader>cn", [[:cnext<CR>]])
+vim.keymap.set('n',"<leader>cp", [[:cprevious<CR>]])
 
 -- Set leader key
 vim.g.mapleader = ' '
