@@ -140,7 +140,7 @@ vim.keymap.set('n', '<leader>do', function()
   if diagnostics_active then
     vim.diagnostic.enable(0)
   else
-    vim.diagnostic.disable(0)
+    vim.diagnostic.enable(false)
   end
 end)
 
