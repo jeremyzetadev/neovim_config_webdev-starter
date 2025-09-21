@@ -1,7 +1,7 @@
 return 
 {
   "catppuccin/nvim",
-  name = "catppuccin",
+  name="catpuccin",
   priority = 1000,
   config = function()
     require("catppuccin").setup()

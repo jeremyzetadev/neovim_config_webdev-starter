@@ -22,6 +22,7 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Define a table of theme modules
 local themes = {
+  tokyonight = 'plugins.themes.tokyonight',
   catpuccin = 'plugins.themes.catpuccin',
   nord = 'plugins.themes.nord',
   onedark = 'plugins.themes.onedark',
@@ -41,7 +42,7 @@ require('lazy').setup({
   require 'plugins.none-ls',
   --require 'plugins.colorscheme',
   --require 'plugins.alpha',
-  --require 'plugins.indent-blankline',
+  require 'plugins.indent-blankline',
   require 'plugins.lazygit',
   require 'plugins.comment',
   require 'plugins.debug',

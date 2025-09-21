@@ -106,7 +106,7 @@ return { -- LSP Configuration & Plugins
     capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
 
     -- Enable the following language servers
-    local servers = {
+    local servers = {  
       lua_ls = {
         -- cmd = {...},
         -- filetypes { ...},
@@ -242,11 +242,14 @@ return { -- LSP Configuration & Plugins
         },
       --cssls = {},
       emmet_language_server = {},
+      clangd = {},
     }
 
 
     -- require('lspconfig').cssmodules_ls.setup{}
     -- require('lspconfig').html.setup{}
+    require('lspconfig').css_variables.setup{}
+    require('lspconfig').clangd.setup{}
     require('lspconfig').emmet_language_server.setup{}
     require('lspconfig').tailwindcss.setup{}
     require('lspconfig').ts_ls.setup{
@@ -279,8 +282,7 @@ return { -- LSP Configuration & Plugins
       'stylua', -- Used to format lua code
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
-
-    require('mason-lspconfig').setup {
+        require('mason-lspconfig').setup {
       handlers = {
         function(server_name)
           local server = servers[server_name] or {}

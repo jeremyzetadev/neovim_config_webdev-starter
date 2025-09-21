@@ -42,7 +42,9 @@ return {
           file_ignore_patterns = { 'node_modules', '.git', '.venv' },
           hidden = true,
         },
-        buffers = {
+        --buffers = true,
+        buffers =
+        {
           initial_mode = 'normal',
           sort_lastused = true,
           -- sort_mru = true,
@@ -53,6 +55,7 @@ return {
             },
           },
         },
+        --noremap = true,
       },
       live_grep = {
         file_ignore_patterns = { 'node_modules', '.git', '.venv' },
