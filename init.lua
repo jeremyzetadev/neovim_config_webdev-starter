@@ -97,5 +97,11 @@ if file_exists(session_file) then
   vim.cmd('source ' .. session_file)
 end
 
+-- Set color groups name example variable color/parameter color
+-- vim.api.nvim_set_hl(0, 'TSVariable', { fg = '#BD93F9' }) -- Purple
+-- vim.api.nvim_set_hl(0, 'TSParameter', { fg = '#afafff' }) -- lightPurple
+-- vim.api.nvim_set_hl(0, '@variable', { fg = '#afafff' }) -- Purple
+-- vim.api.nvim_set_hl(0, '@variable', { fg = '#BD93F9' }) -- Purple
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
