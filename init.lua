@@ -54,7 +54,7 @@ require('lazy').setup({
   -- require 'plugins.chatgpt',
   --require 'plugins.aerial',
   require 'plugins.vim-tmux-navigator',
-  require 'plugins.barbar'
+  --require 'plugins.barbar'    --conflicting with plugins.bufferline
 }, {
   ui = {
     -- If you have a Nerd Font, set icons to an empty table which will use the
