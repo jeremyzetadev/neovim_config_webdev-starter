@@ -28,6 +28,7 @@ local themes = {
   onedark = 'plugins.themes.onedark',
 }
 
+
 -- Setup plugins
 require('lazy').setup({
   require(themes[env_var_nvim_theme]),
@@ -55,7 +56,7 @@ require('lazy').setup({
   -- require 'plugins.chatgpt',
   --require 'plugins.aerial',
   require 'plugins.vim-tmux-navigator',
-  require 'plugins.barbar'
+  -- require 'plugins.barbar'
 }, {
   ui = {
     -- If you have a Nerd Font, set icons to an empty table which will use the
@@ -97,6 +98,13 @@ if file_exists(session_file) then
   -- Source the session file
   vim.cmd('source ' .. session_file)
 end
+
+
+-- Set Variable color name
+-- vim.api.nvim_set_hl(0, 'TSVariable', { fg = '#BD93F9' }) -- Purple
+-- vim.api.nvim_set_hl(0, 'TSParameter', { fg = '#afafff' }) -- lightPurple
+-- vim.api.nvim_set_hl(0, '@variable', { fg = '#afafff' }) -- Purple
+-- vim.api.nvim_set_hl(0, '@variable', { fg = '#BD93F9' }) -- Purple
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
