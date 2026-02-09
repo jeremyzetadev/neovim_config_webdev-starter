@@ -39,6 +39,12 @@ vim.keymap.set('n',"k", "kzz", opts)
 vim.keymap.set('n',"j", "jzz", opts)
 vim.keymap.set('n',"}", "}zz",opts)
 vim.keymap.set('n',"{", "{zz",opts)
+-- vim.keymap.set('n',"s", "i_<esc>r",{noremap=true, silent=true})
+vim.keymap.set('n', 's', function()
+  local char = vim.fn.nr2char(vim.fn.getchar())
+  vim.cmd("normal! a" .. char)
+end, { silent = true, desc = "Insert a single character" })
+
 -- Set ctrl+z to undo to avoid quitting vim
 vim.keymap.set('n',"<C-z>","u")
 vim.keymap.set('n',"'n", [[:nohl<cr>]])
