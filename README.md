@@ -15,7 +15,7 @@ from [https://github.com/nvim-lua/kickstart.nvim] <br>
 git clone https://github.com/nvim-lua/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
 
 ## Install custom neovim setup
-git clone https://github.com/jeremyzetadev/neovim_config_webdev-starter ~/.config/nvim
+git clone https://github.com/jeremyzetadev/neovim_config_webdev-starter.git ~/.config/nvim
 
 # Add nerd-fonts to have icons
 
@@ -57,6 +57,7 @@ require('lspconfig').ts_ls.setup{  <br>
 Install ripgrep and fdfind
 
 ## Need to fix refactor(some areas work/ some doesnt)
+
 
 
 
