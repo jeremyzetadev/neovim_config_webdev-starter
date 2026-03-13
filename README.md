@@ -30,6 +30,7 @@ check init.lua if server names match mason
 :checkhealth mason     -> for diagnostic of mason <br>
 :LspInfo   -> check active lsp
 
+---at nvim 0.11+ DEPRECATED--
 [setting up LSP]  <br>
 :help lspconfig-all
 ||for ts_ls||  <br>
@@ -46,9 +47,14 @@ require('lspconfig').ts_ls.setup{  <br>
       },  <br>
     },  <br>
   },  <br>
-
+---at nvim 0.11+ DEPRECATED--
+for latest check branch lsp-javascript2026
 
 ## Tree Sitter
+npm install -g tree-sitter-cli
+:TSInstall lua
+:TSInstall vimdoc
+
 :TSInstall <language_to_install> <br>
 :TSInstallInfo
 
@@ -57,6 +63,7 @@ require('lspconfig').ts_ls.setup{  <br>
 Install ripgrep and fdfind
 
 ## Need to fix refactor(some areas work/ some doesnt)
+
 
 
 
