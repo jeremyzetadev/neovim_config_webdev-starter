@@ -248,29 +248,42 @@ return { -- LSP Configuration & Plugins
 
     -- require('lspconfig').cssmodules_ls.setup{}
     -- require('lspconfig').html.setup{}
-    require('lspconfig').css_variables.setup{}
-    require('lspconfig').clangd.setup{}
-    require('lspconfig').emmet_language_server.setup{}
-    require('lspconfig').tailwindcss.setup{}
-    require('lspconfig').ts_ls.setup{
-  init_options = {
-    plugins = {
-      {
-        name = "@vue/typescript-plugin",
-        location = "/usr/local/lib/node_modules/@vue/typescript-plugin",
-        languages = {"html", "css", "javascript", "typescript", "vue"},
-      },
-    },
-  },
-    filetypes = {
-      'javascript',
-      'javascriptreact',
-      'javascript.jsx',
-      'typescript',
-      'typescriptreact',
-      'typescript.tsx',
-    },
-}
+--     require('lspconfig').css_variables.setup{}
+--     require('lspconfig').clangd.setup{}
+--     require('lspconfig').emmet_language_server.setup{}
+--     require('lspconfig').tailwindcss.setup{}
+--     require('lspconfig').ts_ls.setup{
+--   init_options = {
+--     plugins = {
+--       {
+--         name = "@vue/typescript-plugin",
+--         location = "/usr/local/lib/node_modules/@vue/typescript-plugin",
+--         languages = {"html", "css", "javascript", "typescript", "vue"},
+--       },
+--     },
+--   },
+--     filetypes = {
+--       'javascript',
+--       'javascriptreact',
+--       'javascript.jsx',
+--       'typescript',
+--       'typescriptreact',
+--       'typescript.tsx',
+--     },
+-- }
+    local serverslsp = {
+        'css_variables',
+        'clangd',
+        'emmet_language_server',
+        'tailwindcss',
+        'ts_ls'
+    }
+
+    for _, lsp in ipairs(serverslsp) do
+        vim.lsp.enable(lsp)
+    end
+
+
         
     -- Ensure the servers and tools above are installed
     require('mason').setup()
