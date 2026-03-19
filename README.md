@@ -21,6 +21,8 @@ git clone https://github.com/jeremyzetadev/neovim_config_webdev-starter.git ~/.c
 
 .ttf install (prefer JetBrainsMono)
 ![image](https://github.com/user-attachments/assets/20c30055-e9ec-41a2-b872-82bc59d12250)
+[Windows after restart uninstall font fix]<br>
+https://learn.microsoft.com/en-us/answers/questions/3783618/solution-installed-fonts-disappearing-after-restar
 
 # To run node in wsl
 sudo apt install npm****
