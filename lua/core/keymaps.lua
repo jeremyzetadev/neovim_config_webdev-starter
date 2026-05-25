@@ -144,6 +144,10 @@ vim.keymap.set('n', '<leader>do', function()
   end
 end)
 
+-- Git diff shortcut
+vim.keymaps.set('n', 'go', ':diffget<CR>', {desc=''})
+-- vim.keymaps.set('n', 'gr', ':diffput<CR>', {desc=''}) update leftside since its main ref no need to update it unless merge?
+
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
