@@ -105,3 +105,7 @@ end
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+
+-- japanese encoding to show the characters normally in the terminal
+vim.o.encoding = 'utf-8'
+vim.o.fileencodings = 'utf-8,cp932,euc-jp,shift-jis'
