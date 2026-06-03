@@ -106,6 +106,12 @@ end
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
 
+-- Set custom diff highlight colors
+vim.api.nvim_set_hl(0, 'DiffAdd', {fg = 'NONE', bg = '#2e4b2e', bold = true} -- Soft green for additions
+vim.api.nvim_set_hl(0, 'DiffDelete', {fg = 'NONE', bg = '#4c1e15', bold = true} -- Soft red for deletions
+vim.api.nvim_set_hl(0, 'DiffChange', {fg = 'NONE', bg = '#2b3e50', bold = true} -- Soft blue for change lines
+vim.api.nvim_set_hl(0, 'DiffText', {fg = '#FABD2F', bg = '#1D2021', bold = true} -- Bright yellow for change character
+      
 -- japanese encoding to show the characters normally in the terminal
 vim.o.encoding = 'utf-8'
 vim.o.fileencodings = 'utf-8,cp932,euc-jp,shift-jis'
