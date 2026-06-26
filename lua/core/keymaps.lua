@@ -18,6 +18,12 @@ vim.keymap.set('n',"k", "kzz")
 vim.keymap.set('n',"j", "jzz")
 vim.keymap.set('n',"}", "}zz")
 vim.keymap.set('n',"{", "{zz")
+--JP setup needs RE-RENDERS
+--vim.keymap.set('n',"kzz:mode<CR>", "kzz")
+--vim.keymap.set('n',"jzz:mode<CR>", "jzz")
+--vim.keymap.set('n',"}zz:mode<CR>", "}zz")
+--vim.keymap.set('n',"{zz:mode<CR>", "{zz")
+
 -- Set ctrl+z to undo to avoid quitting vim
 vim.keymap.set('n',"<C-z>","u")
 -- remove highlight from / ? (find command highlights)
@@ -62,8 +68,8 @@ vim.keymap.set('n', "<leader>pc", insertFullPath, opts)
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 -- Allow moving the cursor through wrapped lines with j, k
-vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
-vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+-- vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+-- vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
 -- clear highlights
 vim.keymap.set('n', '<Esc>', ':noh<CR>', opts)
@@ -87,6 +93,9 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz', opts)
 -- Find and center
 vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
+--JP setup needs RE-RENDERS
+vim.keymap.set('n', 'n', 'nzzzv:mode<CR>')
+vim.keymap.set('n', 'N', 'Nzzzv:mode<CR>')
 
 -- Buffers
 --vim.keymap.set('n', '<Tab>', ':bnext<CR>', opts)
